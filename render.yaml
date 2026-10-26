@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: sensor-server
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: DEVICE_API_KEY
+        sync: false
+      - key: NODE_VERSION
+        value: 20.17.0
